@@ -34,7 +34,7 @@ getSteamUser.getUserInfo(async (infos) => {
         message: `Are you sure you want to copy ${selectedSourceAccountName}'s config to ${selectedTargetAccountName} ?`
     });
 
-    await confirmationPrompt.run() ? copyConfig(selectedSourceAccount.accountid, selectedTargetAccount.accountid) : console.log('ntm fdp')
+    await confirmationPrompt.run() ? copyConfig(selectedSourceAccount.accountid, selectedTargetAccount.accountid) : false;
 });
 
 const copyConfig = async (source, target) => {
